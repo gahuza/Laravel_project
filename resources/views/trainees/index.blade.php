@@ -24,6 +24,12 @@
             <th>Gender</th>
             <th>Action</th>
             <th>Action</th>
+            <th>
+            <form action="{{route('user.logout')}}" method="post">
+                    @csrf
+                   <input type="submit" name="logout" value="LOGOUT">
+                </form>
+            </th>
         </tr>
         @foreach($students as $student)
         <tr>
@@ -41,10 +47,14 @@
                    <input type="submit" name="delete" value="DELETE">
                 </form>
             </th>
+            <th>
+                
+            </th>
         </tr>
 
         @endforeach
         </table>
+        
     </div>
 </body>
 </html>
